@@ -1,13 +1,13 @@
 import React from 'react';
-import type { TimeRangeFilter } from '@/types';
+import type { TimeRangeFilter as TimeRangeFilterType } from '@/types';
 
 export interface TimeRangeFilterProps {
-  selected: TimeRangeFilter;
-  onChange: (range: TimeRangeFilter) => void;
+  selected: TimeRangeFilterType;
+  onChange: (range: TimeRangeFilterType) => void;
 }
 
 export const TimeRangeFilter: React.FC<TimeRangeFilterProps> = ({ selected, onChange }) => {
-  const options: { value: TimeRangeFilter; label: string }[] = [
+  const options: { value: TimeRangeFilterType; label: string }[] = [
     { value: 'today', label: 'Heute' },
     { value: 'week', label: 'Woche' },
     { value: 'month', label: 'Monat' },

@@ -7,49 +7,35 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Dusk Palette
-        darkest: '#260907',
-        burgundy: '#6E363C',
-        terracotta: '#A45F48',
-        slate: '#97A4AD',
-        'light-slate': '#CAD3DD',
-        beige: '#E5E6E0',
-        
-        // Functional Colors
+        // Modern Teal Palette
         primary: {
-          DEFAULT: '#A45F48',
-          dark: '#8B4A36',
-          light: '#D4A89A',
+          DEFAULT: '#007A87', // Teal/Cyan
+          dark: '#005F69',    // Darker Teal
+          light: '#E0F2F1',   // Very Light Teal
         },
-        background: '#E5E6E0',
+        background: '#F2F4F8', // Light Gray/Blueish
         surface: {
           DEFAULT: '#FFFFFF',
-          secondary: '#F5F5F1',
+          secondary: '#F5F5F1', // Keeping for compatibility, though not explicitly in new design
         },
         text: {
-          DEFAULT: '#260907',
-          secondary: '#6E363C',
-          muted: '#97A4AD',
+          DEFAULT: '#1D1D1D',   // Almost Black
+          secondary: '#555555', // Dark Gray
+          muted: '#888888',     // Gray
         },
         border: {
-          DEFAULT: '#CAD3DD',
-          dark: '#97A4AD',
+          DEFAULT: '#E0E0E0',   // Light Gray
+          dark: '#F0F0F0',      // Very Light Gray (Divider)
         },
-        accent: {
-          DEFAULT: '#D4793B',
-          hover: '#B8652E',
-        },
-        // Semantic Colors
-        success: '#6E7C52',
-        warning: '#D4A45F',
-        error: '#6E363C',
-        info: '#97A4AD',
-        // Partner Colors
-        'partner-a': '#6E363C',
-        'partner-b': '#A45F48',
+        
+        // Status Colors
+        success: '#007A87', // Teal as success
+        warning: '#FF9800', // Orange
+        error: '#D32F2F',   // Red
+        info: '#007A87',    // Teal
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
       spacing: {
         '4.5': '1.125rem',
@@ -57,13 +43,18 @@ export default {
         '13': '3.25rem',
       },
       borderRadius: {
-        '4xl': '2rem',
+        'sm': '8px',
+        'md': '12px',
+        'lg': '16px',
+        '4xl': '2rem', // Keeping for compatibility if used
+        'full': '9999px',
       },
       boxShadow: {
-        'card': '0 2px 12px rgba(38, 9, 7, 0.06)',
-        'card-hover': '0 4px 16px rgba(38, 9, 7, 0.1)',
-        'button': '0 2px 8px rgba(164, 95, 72, 0.15)',
-        'button-hover': '0 4px 12px rgba(164, 95, 72, 0.25)',
+        'card': '0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)',
+        'floating': '0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06)',
+        // Keeping previous shadows for compatibility if needed, or mapping them
+        'sm': '0 1px 2px rgba(0, 0, 0, 0.05)',
+        'md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
       },
       keyframes: {
         'slide-up': {

@@ -1,4 +1,5 @@
-import { defineConfig } from 'vite'
+/// <reference types="vitest" />
+import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import path from 'path'
@@ -14,8 +15,8 @@ export default defineConfig({
         name: 'WhoDoes',
         short_name: 'WhoDoes',
         description: 'Fair household task tracking for couples',
-        theme_color: '#A45F48',
-        background_color: '#E5E6E0',
+        theme_color: '#007A87',
+        background_color: '#F2F4F8',
         display: 'standalone',
         start_url: '/',
         icons: [
@@ -58,5 +59,10 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/test/setup.ts',
   },
 })
